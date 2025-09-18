@@ -1,189 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CosmoCore Studios</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #1a1a2e, #16213e);
-      color: white;
-    }
-    header { background-color: #0f3460; padding: 15px 0; }
-    nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; font-size: 18px; padding: 8px 16px; border-radius: 5px; }
-    nav a:hover { background-color: #1a1a2e; }
-    .content { padding: 20px; display: none; }
-    .active { display: block; }
-    .title { text-align: center; margin-bottom: 30px; font-size: 2.5rem; color: #f2f2f2; }
-    .section-box { background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 12px; max-width: 1000px; margin: 0 auto; box-shadow: 0 2px 12px rgba(0,0,0,0.5); }
-    .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; justify-items: center; }
-    .staff-member { background: rgba(255,255,255,0.15); padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); text-align: center; width: 100%; }
-    .staff-name { font-weight: bold; font-size: 1.2rem; margin-bottom: 5px; color: #fff; }
-    .staff-rank { color: #ccc; }
-    .downloads-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding-top: 20px; }
-    .download-card { background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
-    .download-title { font-size: 1.4rem; margin-bottom: 10px; color: #fff; }
-    .download-desc { color: #ccc; margin-bottom: 10px; }
-    .download-link { display: inline-block; padding: 10px 15px; background-color: #2a4d9b; color: white; text-decoration: none; border-radius: 5px; }
-    .download-link:hover { background-color: #1e3a7a; }
-    form { display: flex; flex-direction: column; gap: 15px; }
-    form input, form textarea, form select, form button {
-      width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;
-    }
-    form input, form textarea, form select { background: #e6e6e6; color: #000; }
-    form button { background-color: #0f3460; color: white; cursor: pointer; }
-    form button:hover { background-color: #1a1a2e; }
-    ul { list-style: disc; padding-left: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Your DevTool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#" onclick="showSection('home')">Home</a>
-      <a href="#" onclick="showSection('downloads')">Downloads</a>
-      <a href="#" onclick="showSection('discord')">Discord</a>
-      <a href="#" onclick="showSection('apply')">Apply</a>
-      <a href="#" onclick="showSection('bugs')">Bugs</a>
-      <a href="#" onclick="showSection('realms')">Realms</a>
-    </nav>
-  </header>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">Your DevTool</a>
+            <div class="nav-links">
+                <a href="#toc">Table of Contents</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <section id="home" class="content active">
-      <div class="title">CosmoCore Studios</div>
-      <div class="section-box">
-        <p>Welcome to <strong>CosmoCore Studios</strong> – a Minecraft community built by players, for players. Dive into custom-built minigames, epic adventures, and a tight-knit community!</li>
-        <p>💎 We offer a unique Bedrock server with games like:</p>
-        <ul>
-          <li>Laser Tag</li>
-          <li>Spleef</li>
-          <li>Murder Mystery</li>
-          <li>SkyWars & BedWars</li>
-          <li>Hunger Games & Parkour</li>
-          <li>SkyBlock / OneBlock survival</li>
-        </ul>
-        <p>Join us and help shape the future of Minecraft mini-games!</p>
-      </div>
-      <h2 style="text-align:center; margin: 30px 0 20px;">Staff Team</h2>
-      <div class="section-box">
-        <div class="staff-grid">
-          <div class="staff-member"><div class="staff-name">Mydemons2354</div><div class="staff-rank">Owner</div></div>
-          <div class="staff-member"><div class="staff-name">ewoker17</div><div class="staff-rank">Co Owner</div></div>
-          <div class="staff-member"><div class="staff-name">RudroGames</div><div class="staff-rank">Administrator</div></div>
-          <div class="staff-member"><div class="staff-name">MatthewLuis</div><div class="staff-rank">Administrator</div></div>
-          <div class="staff-member"><div class="staff-name">Dream12347256</div><div class="staff-rank">Moderator</div></div>
-          <div class="staff-member"><div class="staff-name">CoolPlayer</div><div class="staff-rank">Helper</div></div>
-          <div class="staff-member"><div class="staff-name">Error 422</div><div class="staff-rank">Developer/Builder</div></div>
-        </div>
-      </div>
-    </section>
+    <main class="container">
+        <section class="tos-header">
+            <h1>Terms of Service</h1>
+            <p class="updated-date">Last Modified: <span id="last-updated">September 18, 2025</span></p>
+            <div class="intro">
+                <p>Welcome to <strong>Your DevTool</strong>! These Terms of Service ("Terms") govern your access to and use of our developer tools, services, and associated websites (the "Service"). By accessing or using the Service, you agree to be bound by these Terms and our <a href="/privacy-policy" class="text-link">Privacy Policy</a>. If you do not agree to these Terms, do not use the Service.</p>
+                <div class="quick-summary">
+                    <h2>Quick Summary for Developers</h2>
+                    <ul>
+                        <li><span class="highlight">Respect our IP:</span> You can use our tools to build your projects, but you can't re-sell our tools or create a competing product.</li>
+                        <li><span class="highlight">Your Data, Your Responsibility:</span> You are responsible for the data you process using our Service. We handle it according to our Privacy Policy, but you must ensure your own compliance.</li>
+                        <li><span class="highlight">Your Account Security:</span> Keep your API keys and account credentials safe. You are responsible for all activity on your account.</li>
+                        <li><span class="highlight">No Illegal Use:</span> Do not use our Service for any illegal or malicious activity.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="downloads" class="content">
-      <div class="title">Downloads</div>
-      <div class="downloads-grid">
-        <div class="download-card">
-          <div class="download-title">🌌 Minecraft Void World</div>
-          <p class="download-desc">Perfect blank world for creators — no terrain, great for Redstone & custom maps.</p>
-          <a class="download-link" href="https://www.mediafire.com/file/bdgqx7p1dy7j8b2/Void.mcworld/file" target="_blank">Download Void World</a>
-        </div>
-        <div class="download-card">
-          <div class="download-title">🧱 AseenMysterypax - PvP Texture Pack</div>
-          <p class="download-desc">Enhance your PvP with short swords, low fire, clean UI & stylish visuals. Ideal for Bedrock Edition.</p>
-          <a class="download-link" href="https://www.mediafire.com/file/kxtb347yw1is2ao/AseenMysterypax.mcpack/file" target="_blank">Download Texture Pack</a>
-        </div>
-      </div>
-    </section>
+        <aside class="sticky-sidebar">
+            <div id="toc" class="table-of-contents">
+                <p class="toc-title">Table of Contents</p>
+                <nav id="toc-nav"></nav>
+            </div>
+        </aside>
 
-    <section id="discord" class="content">
-      <div class="title">CosmoCore Discord</div>
-      <div class="section-box">
-        <p>Welcome to the <strong>CosmoCore Studios Discord Server</strong> – your gateway to one of the most exciting Minecraft Bedrock communities!</p>
-        <p>🎮 <strong>Minigames Server Features:</strong></p>
-        <ul>
-          <li>🔫 Laser Tag</li>
-          <li>❄️ Spleef</li>
-          <li>🔪 Murder Mystery</li>
-          <li>☁️ SkyWars</li>
-          <li>🛏️ BedWars</li>
-          <li>🏹 HungerGames</li>
-          <li>🏃 Parkour</li>
-          <li>🌍 SkyBlock / OneBlock</li>
-        </ul>
-        <a class="download-link" href="https://discord.gg/nKEvnZjHGm" target="_blank">Join Discord Server</a>
-      </div>
-    </section>
+        <article class="tos-content">
+            <section id="agreement">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By registering for and using the Service, you represent and warrant that you have read, understood, and agree to be bound by these Terms. If you are accepting these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity.</p>
+            </section>
 
-    <section id="apply" class="content">
-      <div class="title">Staff Application</div>
-      <div class="section-box">
-        <form onsubmit="handleForm(event)">
-          <input type="text" placeholder="Your Minecraft Username" required>
-          <input type="text" placeholder="Your Discord Tag (e.g., User#1234)" required>
-          <textarea rows="10" placeholder="Why do you want to join the staff team? Include relevant experience, what you bring to the team, your timezone, how many hours you can dedicate weekly, and more." required></textarea>
-          <button type="submit">Submit Application</button>
-        </form>
-      </div>
-    </section>
+            <section id="licensing">
+                <h2>2. Developer License and Restrictions</h2>
+                <p>We grant you a non-exclusive, non-transferable, revocable license to access and use the Service for the purpose of developing and integrating with your applications. This license is subject to the following restrictions:</p>
+                <ul>
+                    <li>You may not sublicense, resell, or distribute the Service.</li>
+                    <li>You may not reverse engineer, decompile, or otherwise attempt to derive the source code of the Service.</li>
+                    <li>You may not use the Service to build a product that is substantially similar to or competes with our Service.</li>
+                </ul>
+            </section>
 
-    <section id="bugs" class="content">
-      <div class="title">Report a Bug</div>
-      <div class="section-box">
-        <form onsubmit="handleBugReport(event)">
-          <input type="text" placeholder="Your Minecraft Username (optional)">
-          <textarea rows="10" placeholder="Describe the bug you found. Include how to reproduce it, what happened, and expected behavior." required></textarea>
-          <button type="submit">Submit Bug Report</button>
-        </form>
-      </div>
-    </section>
+            <section id="account-security">
+                <h2>3. Account Registration and Security</h2>
+                <p>You must provide accurate and complete information when registering. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. Notify us immediately of any unauthorized use.</p>
+            </section>
 
-    <section id="realms" class="content">
-      <div class="title">Realms</div>
-      <div class="section-box">
-        <p>Information about our Minecraft Realms will be shared soon!</p>
-      </div>
-    </section>
-  </main>
+            <section id="user-responsibilities">
+                <h2>4. Your Responsibilities</h2>
+                <p>You are responsible for your use of the Service and for any data or content processed through your account. You agree not to use the Service for any unlawful or prohibited activities, including:</p>
+                <ul>
+                    <li>Transmitting malicious code or viruses.</li>
+                    <li>Infringing on intellectual property rights.</li>
+                    <li>Collecting user data without a valid privacy policy or consent.</li>
+                </ul>
+            </section>
 
-  <footer>&copy; 2025 CosmoCore Studios. All rights reserved.</footer>
-  
-  <audio id="backgroundMusic" autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-creativeminds.mp3" type="audio/mpeg">
-    <source src="https://www.bensound.com/bensound-music/bensound-goinghigher.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  
-  <script>
-    const music = [
-      "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3",
-      "https://www.bensound.com/bensound-music/bensound-goinghigher.mp3"
-    ];
-    let currentTrack = 0;
-    const player = document.getElementById("backgroundMusic");
+            <section id="ip-rights">
+                <h2>5. Intellectual Property Rights</h2>
+                <p>The Service, including all source code, software, documentation, and trademarks, is and shall remain the exclusive property of Your DevTool and its licensors. Your use of the Service does not grant you any ownership rights.</p>
+            </section>
 
-    player.addEventListener("ended", () => {
-      currentTrack = (currentTrack + 1) % music.length;
-      player.src = music[currentTrack];
-      player.play();
-    });
+            <section id="data-privacy">
+                <h2>6. Data and Privacy</h2>
+                <p>Our collection and use of your data are governed by our Privacy Policy. You are responsible for ensuring that your own data collection practices are compliant with all relevant laws, including data protection regulations like GDPR or CCPA.</p>
+            </section>
 
-    function showSection(id) {
-      const sections = document.querySelectorAll('.content');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
+            <section id="termination">
+                <h2>7. Termination</h2>
+                <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason whatsoever, including if you breach these Terms. All provisions that, by their nature, should survive termination shall survive, including ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+            </section>
 
-    function handleForm(event) {
-      event.preventDefault();
-      alert('Thank you for applying! We will review your application shortly.');
-    }
+            <section id="disclaimer">
+                <h2>8. Disclaimer of Warranties</h2>
+                <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. WE MAKE NO WARRANTIES, WHETHER EXPRESS OR IMPLIED, REGARDING THE SERVICE, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+            </section>
 
-    function handleBugReport(event) {
-      event.preventDefault();
-      alert('Thank you for reporting the bug! We will look into it.');
-    }
-  </script>
+            <section id="limitation-of-liability">
+                <h2>9. Limitation of Liability</h2>
+                <p>IN NO EVENT SHALL YOUR DEVTOOL, NOR ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.</p>
+            </section>
+
+            <section id="indemnification">
+                <h2>10. Indemnification</h2>
+                <p>You agree to indemnify and hold harmless Your DevTool and its affiliates from any and all claims, damages, liabilities, costs, and expenses arising from your use of the Service or your breach of these Terms.</p>
+            </section>
+
+            <section id="governing-law">
+                <h2>11. Governing Law and Dispute Resolution</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws of [Your State/Country], without regard to its conflict of law provisions. Any dispute will be resolved through arbitration or in a court located in [Your City, State/Country].</p>
+            </section>
+
+            <section id="changes">
+                <h2>12. Changes to These Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide reasonable notice of any material changes. By continuing to access or use the Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+            </section>
+
+            <section id="contact">
+                <h2>13. Contact Information</h2>
+                <p>If you have any questions about these Terms, please contact us at: <a href="mailto:legal@yourdevtool.com" class="text-link">legal@yourdevtool.com</a>.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="container">
+        <p>&copy; <span id="current-year"></span> Your DevTool. All rights reserved.</p>
+        <nav class="footer-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/status">Service Status</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
